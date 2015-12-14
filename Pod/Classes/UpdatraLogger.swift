@@ -10,7 +10,7 @@ import Foundation
 
 class UpdatraLogger{
     static let logger = UpdatraLogger()
-    public func log(s: String) {
+    func log(s: String) {
         print("[Updatra] \(s)")
     }
     static func sharedInstance() -> UpdatraLogger{

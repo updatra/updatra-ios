@@ -1,13 +1,17 @@
 # Updatra
 
-[![CI Status](http://img.shields.io/travis/Michael Seid/Updatra.svg?style=flat)](https://travis-ci.org/Michael Seid/Updatra)
-[![Version](https://img.shields.io/cocoapods/v/Updatra.svg?style=flat)](http://cocoapods.org/pods/Updatra)
-[![License](https://img.shields.io/cocoapods/l/Updatra.svg?style=flat)](http://cocoapods.org/pods/Updatra)
-[![Platform](https://img.shields.io/cocoapods/p/Updatra.svg?style=flat)](http://cocoapods.org/pods/Updatra)
+[![CI Status](http://img.shields.io/travis/updatra/updatra-ios.svg?style=flat)](https://travis-ci.org/updatra/updatra-ios)
+[![Version](https://img.shields.io/cocoapods/v/updatra.svg?style=flat)](http://cocoapods.org/pods/updatra)
+[![License](https://img.shields.io/cocoapods/l/updatra.svg?style=flat)](http://cocoapods.org/pods/updatra)
+[![Platform](https://img.shields.io/cocoapods/p/updatra.svg?style=flat)](http://cocoapods.org/pods/updatra)
+
+## Description
+
+This is the Library to integrate [Updatra](https://www.updatra.com). Helps mobile applictions send smart push notifications. Deliver push notifications  and if a user didn't see it, an automatic follow up will be delivered to their inbox. Be persistant and smart!
 
 ## Usage
 
-To run the example project, clone the repo, and run `pod install` from the Example directory first.
+To run the example project, clone the repo, and run `pod install` from the Example directory first. 
 
 ## Requirements
 
@@ -17,12 +21,12 @@ Updatra is available through [CocoaPods](http://cocoapods.org). To install
 it, simply add the following line to your Podfile:
 
 ```ruby
-pod "Updatra"
+pod "updatra"
 ```
 
 ## Author
 
-Michael Seid, mbseid@gmail.com
+Michael Seid, mike@updatra.com
 
 ## License
 
