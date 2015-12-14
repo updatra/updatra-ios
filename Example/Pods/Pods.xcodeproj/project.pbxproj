@@ -126,6 +126,7 @@
 		D7C8157F419F92C6A81450CF0203BE5F /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7E34DFCDC16DA540B2A718239FDE1C91 /* XCTest.framework */; };
 		DAAC324891274180BCC978A6D6729A82 /* Callsite.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30957AEAA1A4598C5CBED21270C97A0E /* Callsite.swift */; };
 		DEE170DD3064F7343884A4016546B762 /* DSL+Wait.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1579A2596CF82F72388CEBFC5E74DAE /* DSL+Wait.swift */; };
+		E02E8BFB1C1E960000542045 /* UpdatraLogger.swift in Sources */ = {isa = PBXBuildFile; fileRef = E02E8BFA1C1E960000542045 /* UpdatraLogger.swift */; };
 		E19167797EF881C97BBFB5607406EC56 /* QuickConfiguration.h in Headers */ = {isa = PBXBuildFile; fileRef = 3E365D4B54D01C1E673033EF0A00636D /* QuickConfiguration.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		E2FBD93D72DF01427486D1A6853FC689 /* Expectation.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE3679B3E3D565E10C488832E80213D3 /* Expectation.swift */; };
 		E36C5201AE7F1CBB25F9D2E7CBFC3C20 /* Match.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B4D52AC03CEBC4673533BF65AB9BF88 /* Match.swift */; };
@@ -419,6 +420,7 @@
 		DEBA35D6AFD24264322AABE67FC3BE15 /* Nimble.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = Nimble.h; path = Nimble/Nimble.h; sourceTree = "<group>"; };
 		E0030F138F4EF9546037D768FDE74A39 /* FBSnapshotTestCase.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = FBSnapshotTestCase.xcconfig; sourceTree = "<group>"; };
 		E025AEEB4611CDF9E43C71FB70B76465 /* Stream.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Stream.swift; path = Source/Stream.swift; sourceTree = "<group>"; };
+		E02E8BFA1C1E960000542045 /* UpdatraLogger.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UpdatraLogger.swift; sourceTree = "<group>"; };
 		E25EB386F220DEAB662EDA88A68FFF6D /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		E2850FABC26B409F6A8EC419FEB05130 /* SwiftyJSON-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "SwiftyJSON-dummy.m"; sourceTree = "<group>"; };
 		E2ED178ECCEF21AA1E7DF1997C647E21 /* ResponseSerialization.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ResponseSerialization.swift; path = Source/ResponseSerialization.swift; sourceTree = "<group>"; };
@@ -880,6 +882,7 @@
 			children = (
 				B79D525F57C6B94C9B54B2BCD9B089E7 /* Identity.swift */,
 				EB3D50F357409FE72C35A181DB097EF5 /* Updatra.swift */,
+				E02E8BFA1C1E960000542045 /* UpdatraLogger.swift */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -1311,6 +1314,7 @@
 				EDADBC0E463C26D8C15E4DD480D8FA0F /* Identity.swift in Sources */,
 				755AF8CA4F843CE82E57807B7D4AFAA3 /* Updatra-dummy.m in Sources */,
 				4F5914AAB78644F94770D827EC57A3D5 /* Updatra.swift in Sources */,
+				E02E8BFB1C1E960000542045 /* UpdatraLogger.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

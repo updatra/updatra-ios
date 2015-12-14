@@ -18,6 +18,7 @@ public class UpdatraDelegate {
     let errorMsg = "Unsuccessful identifification, please ensure to have email, userId and firstName"
     let identityMsg = "Please make sure to identify the user"
     let apiBase = "https://api.updatra.com/edge/v1"
+    let logger = UpdatraLogger.sharedInstance()
     
     static func sharedInstanceWithAppId(appId: String) -> UpdatraDelegate {
         sharedInstance.appId = appId
@@ -32,8 +33,8 @@ public class UpdatraDelegate {
         let request = "\(apiBase)/app/\(appId!)/identify"
         Alamofire.request(.GET, request, parameters: params)
             .responseJSON { response in
-                print(response.request)
-                print(response.data)
+                self.logger.log("\(response.request)")
+                self.logger.log("\(response.data)")
                 switch response.result {
                     case .Success(let json):
                         print("Success with JSON: \(json)")
@@ -41,10 +42,10 @@ public class UpdatraDelegate {
                         if let id = parsedJson["id"].string {
                             Identity.create(id)
                         } else {
-                            print(self.errorMsg)
+                            self.logger.log(self.errorMsg)
                         }
                     default:
-                          print(self.errorMsg)
+                          self.logger.log(self.errorMsg)
                 }
         }
     }
@@ -54,12 +55,13 @@ public class UpdatraDelegate {
             let request = "\(apiBase)/app/\(appId!)/identify/device"
             Alamofire.request(.GET, request, parameters: ["id": visitorId, "device": ["ios": id]])
                 .responseJSON { response in
-                    print(response.request)
+                    self.logger.log("\(response.request)")
+                    self.logger.log("\(response.data)")
                     switch response.result {
-                    case .Success:
-                        print("Succesfully subscribed device")
-                    default:
-                        print(self.errorMsg)
+                        case .Success:
+                            self.logger.log("Succesfully subscribed device")
+                        default:
+                            self.logger.log(self.errorMsg)
                     }
             }
         } else {
@@ -72,12 +74,13 @@ public class UpdatraDelegate {
             let request = "\(apiBase)/app/\(appId!)/identify/presence"
             Alamofire.request(.GET, request, parameters: ["id": visitorId, "device": "ios"])
                 .responseJSON { response in
-                    print(response.request)
+                    self.logger.log("\(response.request)")
+                    self.logger.log("\(response.data)")
                     switch response.result {
                         case .Success:
-                            print("Succesfully shared presense")
+                            self.logger.log("Succesfully shared presense")
                         default:
-                            print(self.errorMsg)
+                            self.logger.log(self.errorMsg)
                     }
             }
         } else {
@@ -91,28 +94,30 @@ public class UpdatraDelegate {
                 let seenRequest = "\(apiBase)/app/\(appId!)/update/\(updateId)/seen"
                 Alamofire.request(.GET, seenRequest, parameters: ["id": visitorId])
                     .responseJSON { response in
-                        print(response.request)
+                        self.logger.log("\(response.request)")
+                        self.logger.log("\(response.data)")
                         switch response.result {
-                        case .Success:
-                            print("Succesfully seen update")
-                        default:
-                            print(self.errorMsg)
+                            case .Success:
+                                self.logger.log("Succesfully seen update")
+                            default:
+                                self.logger.log(self.errorMsg)
                         }
                 }
                 let clickRequest = "\(apiBase)/app/\(appId!)/update/\(updateId)/click"
                 Alamofire.request(.GET, clickRequest, parameters: ["id": visitorId])
                     .responseJSON { response in
-                        print(response.request)
+                        self.logger.log("\(response.request)")
+                        self.logger.log("\(response.data)")
                         switch response.result {
-                        case .Success:
-                            print("Succesfully clicked update")
-                        default:
-                            print(self.errorMsg)
+                            case .Success:
+                                self.logger.log("Succesfully clicked update")
+                            default:
+                                self.logger.log(self.errorMsg)
                         }
                 }
 
             } else {
-                print(identityMsg)
+                logger.log(identityMsg)
             }
 
         }
