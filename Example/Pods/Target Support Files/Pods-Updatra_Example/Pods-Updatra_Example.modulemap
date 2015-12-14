@@ -1,0 +1,6 @@
+framework module Pods_Updatra_Example {
+  umbrella header "Pods-Updatra_Example-umbrella.h"
+
+  export *
+  module * { export * }
+}
